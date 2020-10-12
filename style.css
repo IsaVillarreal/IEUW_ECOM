@@ -43,6 +43,7 @@
 }
 
 
+
 #slider {
   margin: 0 auto;
   width: 1225px;
@@ -165,4 +166,207 @@
      max-width: calc(100% - 140px);
      margin: 0 auto;
   }
+}
+
+
+
+
+
+.content1 img{
+  margin: -460px 0 0 0;
+  margin-left:900px;
+  float:left;
+  display: flex;
+  padding: 10px;
+  border: 3px solid #ccc;
+  width: 400px;
+  height: 100px;
+  height: 1%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.content2 img{
+  margin: -320px 0 0 0;
+  margin-left:900px;
+  float:left;
+  display: flex;
+  padding: 10px;
+  border: 3px solid #ccc;
+  width: 400px;
+  height: 100px;
+  height: 1%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.content3 img{
+  margin: -180px 0 0 0;
+  margin-left:900px;
+  float:left;
+  display: flex;
+  padding: 10px;
+  border: 3px solid #ccc;
+  width: 400px;
+  height: 100px;
+  height: 1%;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+
+#slider2 {
+  margin: 0 0 0 130px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+}
+#slider input[type=radio] {
+  display: none;
+}
+#slider label {
+  cursor:pointer;
+  text-decoration: none;
+}
+#slides2 {
+  padding: 10px;
+  border: 3px solid #ccc;
+  background: #fff;
+  position: left;
+  z-index: 1;
+}
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+#slide1:checked ~ #slides2 .inner {
+  margin-left: 0;
+}
+#slide2:checked ~ #slides2 .inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ #slides2 .inner {
+  margin-left: -200%;
+}
+#slide4:checked ~ #slides2 .inner {
+  margin-left: -300%;
+}
+#slides2 .inner {
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  width: 400%;
+  line-height: 0;
+  height: 400px;
+}
+
+#slides2 .slide {
+  
+  float:left;
+  display: flex;
+  
+  
+  height: 1%;
+  color: #fff;
+}
+
+
+#controls {
+  margin: -230px 0 0 0;
+  width: 100%;
+  height: 100px;
+  z-index: 3;
+  position: relative;
+}
+#controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+}
+#controls label:hover {
+  opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+  background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+  float:right;
+  margin: 0 -50px 0 0;
+  display: block;
+}
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+  background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+  float:left;
+  margin: 0 0 0 -50px;
+  display: block;
+}
+#bullets {
+  margin: 150px 0 0;
+  text-align: center;
+}
+#bullets label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius:100%;
+  background: #ccc;
+  margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+  background: #444;
+}
+@media screen and (max-width: 900px) {
+  #slide1:checked ~ #controls label:nth-child(2),
+  #slide2:checked ~ #controls label:nth-child(3),
+  #slide3:checked ~ #controls label:nth-child(4),
+  #slide4:checked ~ #controls label:nth-child(1),
+  #slide1:checked ~ #controls label:nth-last-child(2),
+  #slide2:checked ~ #controls label:nth-last-child(3),
+  #slide3:checked ~ #controls label:nth-last-child(4),
+  #slide4:checked ~ #controls label:nth-last-child(1) {
+     margin: 0;
+  }
+  #slides2 {
+     max-width: calc(100% - 140px);
+     margin: 0 auto;
+  }
+}
+
+.noticia1 {
+  position: relative;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    font-size: .6cm;
+    z-index: 10;
+
+}
+
+.imgnoti1 img{
+  margin: 0 0 0 30px;
+  
+  float:left;
+  display: flex;
+  padding: 10px;
+  border: 3px solid #ccc;
+  width: 700px;
+  height: 500px;
+  height: 1%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.noticiatexto {
+  position: relative;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    font-size: .6cm;
+    z-index: 10;
 }
